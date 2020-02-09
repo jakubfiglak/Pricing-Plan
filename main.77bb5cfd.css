@@ -1,2 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #494c5f;
+}
+
+body {
+  min-height: 100vh;
+  background: url("/bg-top.afcc16fe.svg") top right no-repeat, #f6f6fe;
+}
+
+.header {
+  margin: 1.5rem;
+  text-align: center;
+}
+.header__title {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  text-align: center;
+  justify-self: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 90%;
+  background: #fff;
+  border-radius: 10px;
+}
+.card__title {
+  font-size: 1rem;
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.card__price span {
+  font-size: 1.5rem;
+  padding: 0 0.2rem;
+}
+.card__list {
+  list-style: none;
+  width: 100%;
+}
+.card__list-element {
+  padding: 0.5rem;
+  border-bottom: 1px solid #b3b5c6;
+}
+.card__list-element:first-child {
+  border-top: 1px solid #b3b5c6;
+}
+.card__btn {
+  border: none;
+  background: linear-gradient(245deg, #696fdd, #a3a8f0);
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.card--central {
+  background: linear-gradient(245deg, #696fdd, #a3a8f0);
+  color: white;
+}
+.card--central .card__list-element {
+  border-bottom: 1px solid #fff;
+}
+.card--central .card__list-element:first-child {
+  border-top: 1px solid #fff;
+}
+.card--central .card__btn {
+  background: #fff;
+  color: #a3a8f0;
+}
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
