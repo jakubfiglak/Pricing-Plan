@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
 *,
 *::before,
 *::after {
@@ -9,22 +9,69 @@
 
 html {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  color: #494c5f;
+  font-weight: 600;
+  color: #6d708d;
 }
 
 body {
   min-height: 100vh;
-  background: url("/bg-top.afcc16fe.svg") top right no-repeat, #f6f6fe;
+  background: #f6f6fe;
+}
+
+.top {
+  position: fixed;
+  z-index: -1;
+  top: -50px;
+  right: -180px;
+}
+
+.bottom {
+  display: none;
 }
 
 .header {
-  margin: 1.5rem;
+  margin: 1.5rem 0 3rem;
   text-align: center;
 }
 .header__title {
   padding: 1.5rem;
   font-size: 1.5rem;
+}
+.header .switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .switch__label {
+  font-size: 0.8rem;
+}
+.header .switch__checkbox {
+  -webkit-appearance: none;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  margin: 0 1rem;
+  background: linear-gradient(245deg, #696fdd, #a3a8f0);
+  border-radius: 25px;
+}
+.header .switch__checkbox:focus {
+  outline: 0;
+}
+.header .switch__checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 2.5px;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  background: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.header .switch__checkbox:checked::after {
+  transform: translate(25px, -50%);
 }
 
 .container {
@@ -53,7 +100,8 @@ body {
   align-items: center;
   justify-self: center;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: #494c5f;
 }
 .card__price span {
   font-size: 1.5rem;
@@ -64,7 +112,7 @@ body {
   width: 100%;
 }
 .card__list-element {
-  padding: 0.5rem;
+  padding: 1rem;
   border-bottom: 1px solid #b3b5c6;
 }
 .card__list-element:first-child {
@@ -84,11 +132,14 @@ body {
   background: linear-gradient(245deg, #696fdd, #a3a8f0);
   color: white;
 }
+.card--central .card__price {
+  color: white;
+}
 .card--central .card__list-element {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #f6f6fe;
 }
 .card--central .card__list-element:first-child {
-  border-top: 1px solid #fff;
+  border-top: 1px solid #f6f6fe;
 }
 .card--central .card__btn {
   background: #fff;
