@@ -26,16 +26,23 @@ body {
   z-index: -1;
   top: -50px;
   right: -180px;
+
+  @media screen and (min-width: 1024px) {
+    top: 0;
+    right: 0;
+  }
 }
 
 .bottom {
   display: none;
-}
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  @media screen and (min-width: 1024px) {
+    display: inline;
+    position: fixed;
+    z-index: -1;
+    left: 0px;
+    bottom: 0px;
+  }
 }
 
 .attribution {
