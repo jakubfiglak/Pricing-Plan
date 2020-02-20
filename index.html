@@ -11,17 +11,26 @@
     />
     <link rel="stylesheet" href="./scss/main.scss" />
     <title>Frontend Mentor | Pricing Component With Toggle</title>
-    <script src="/js/index.js"></script>
+    <script src="/js/index.js" defer></script>
   </head>
   <body>
+    <img src="./img/bg-top.svg" alt="" class="top" />
+    <img src="./img/bg-bottom.svg" alt="" class="bottom" />
+
     <header class="header">
       <h1 class="header__title">Our Pricing</h1>
-      <div class="header__switch">
-        <label for="switch">Annually</label>
-        <input type="checkbox" name="switch" id="switch" />
-        <label for="switch">Monthly</label>
+      <div class="switch">
+        <label for="switch" class="switch__label">Annually</label>
+        <input
+          type="checkbox"
+          name="switch"
+          id="switch"
+          class="switch__checkbox"
+        />
+        <label for="switch" class="switch__label">Monthly</label>
       </div>
     </header>
+
     <main>
       <div class="container">
         <div class="card">
@@ -36,6 +45,7 @@
           </ul>
           <button class="card__btn">Learn More</button>
         </div>
+
         <div class="card card--central">
           <h2 class="card__title">
             Professional
@@ -48,6 +58,7 @@
           </ul>
           <button class="card__btn">Learn More</button>
         </div>
+
         <div class="card">
           <h2 class="card__title">
             Master
@@ -62,6 +73,7 @@
         </div>
       </div>
     </main>
+
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
