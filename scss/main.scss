@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'header';
+@import 'cards';
 
 *,
 *::before,
@@ -30,142 +32,18 @@ body {
   display: none;
 }
 
-.header {
-  margin: 1.5rem 0 3rem;
-  text-align: center;
-
-  &__title {
-    padding: 1.5rem;
-    font-size: 1.5rem;
-  }
-
-  .switch {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__label {
-      font-size: 0.8rem;
-    }
-
-    &__checkbox {
-      -webkit-appearance: none;
-      position: relative;
-      width: 50px;
-      height: 25px;
-      margin: 0 1rem;
-      background: $main-gradient;
-      border-radius: 25px;
-
-      &:focus {
-        outline: 0;
-      }
-
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 2.5px;
-        transform: translateY(-50%);
-        content: '';
-        display: block;
-        background: #fff;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        transition: 0.5s;
-      }
-
-      &:checked {
-        &::after {
-          transform: translate(25px, -50%);
-        }
-      }
-    }
-  }
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.card {
-  display: grid;
-  grid-template-columns: 100%;
-  justify-content: center;
-  text-align: center;
-  justify-self: center;
-  gap: 1.5rem;
+.attribution {
   padding: 1.5rem;
-  width: 90%;
-  background: #fff;
-  border-radius: 10px;
+  text-align: center;
+  font-size: 0.6rem;
 
-  &__title {
-    font-size: 1rem;
-  }
-
-  &__price {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: $dark-gray;
-
-    span {
-      font-size: 1.5rem;
-      padding: 0 0.2rem;
-    }
-  }
-
-  &__list {
-    list-style: none;
-    width: 100%;
-
-    &-element {
-      padding: 1rem;
-      border-bottom: 1px solid $light-gray;
-
-      &:first-child {
-        border-top: 1px solid $light-gray;
-      }
-    }
-  }
-
-  &__btn {
-    border: none;
-    background: $main-gradient;
-    font-family: $font-stack;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 0.5rem;
-    border-radius: 5px;
-  }
-
-  &--central {
-    background: $main-gradient;
-    color: white;
-
-    .card__price {
-      color: white;
-    }
-
-    .card__list {
-      &-element {
-        border-bottom: 1px solid $vlight-gray;
-
-        &:first-child {
-          border-top: 1px solid $vlight-gray;
-        }
-      }
-    }
-
-    .card__btn {
-      background: #fff;
-      color: $light-blue;
-    }
+  a {
+    color: inherit;
   }
 }

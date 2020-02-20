@@ -1,0 +1,53 @@
+.header {
+  margin: 1.5rem 0 3rem;
+  text-align: center;
+
+  &__title {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__label {
+      font-size: 0.8rem;
+    }
+
+    &__checkbox {
+      -webkit-appearance: none;
+      position: relative;
+      width: 50px;
+      height: 25px;
+      margin: 0 1rem;
+      background: $main-gradient;
+      border-radius: 25px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 2.5px;
+        transform: translateY(-50%);
+        content: '';
+        display: block;
+        background: #fff;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        transition: 0.5s;
+      }
+
+      &:checked {
+        &::after {
+          transform: translate(25px, -50%);
+        }
+      }
+    }
+  }
+}
