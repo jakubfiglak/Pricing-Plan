@@ -1,34 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  color: #6d708d;
-}
-
-body {
-  min-height: 100vh;
-  background: #f6f6fe;
-}
-
-.top {
-  position: fixed;
-  z-index: -1;
-  top: -50px;
-  right: -180px;
-}
-
-.bottom {
-  display: none;
-}
-
 .header {
   margin: 1.5rem 0 3rem;
   text-align: center;
@@ -72,12 +42,6 @@ body {
 }
 .header .switch__checkbox:checked::after {
   transform: translate(25px, -50%);
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
 }
 
 .card {
@@ -144,6 +108,51 @@ body {
 .card--central .card__btn {
   background: #fff;
   color: #a3a8f0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #6d708d;
+}
+
+body {
+  min-height: 100vh;
+  background: #f6f6fe;
+}
+
+.top {
+  position: fixed;
+  z-index: -1;
+  top: -50px;
+  right: -180px;
+}
+
+.bottom {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.attribution {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.attribution a {
+  color: inherit;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
