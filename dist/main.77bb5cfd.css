@@ -23,6 +23,7 @@
   margin: 0 1rem;
   background: linear-gradient(245deg, #696fdd, #a3a8f0);
   border-radius: 25px;
+  cursor: pointer;
 }
 .header .switch__checkbox:focus {
   outline: 0;
@@ -106,6 +107,14 @@
   font-weight: bold;
   padding: 1rem;
   border-radius: 5px;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.card__btn:hover {
+  background: transparent;
+  color: #696fdd;
+  border: 1px solid #696fdd;
 }
 .card--central {
   background: linear-gradient(245deg, #696fdd, #a3a8f0);
@@ -124,6 +133,11 @@
   background: #fff;
   color: #a3a8f0;
 }
+.card--central .card__btn:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
 @media screen and (min-width: 1024px) {
   .card--central {
     transform: scaleY(1.1);
@@ -131,7 +145,7 @@
 }
 @media screen and (min-width: 533px) {
   .card {
-    width: 70%;
+    width: 400px;
   }
 }
 @media screen and (min-width: 1024px) {
