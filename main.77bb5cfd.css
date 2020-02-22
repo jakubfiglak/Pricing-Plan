@@ -44,14 +44,15 @@
   transform: translate(25px, -50%);
 }
 
-.container {
+.card-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   max-width: 1440px;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .container {
+  .card-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
     margin: 5rem;
@@ -156,6 +157,13 @@ html {
 body {
   min-height: 100vh;
   background: #f6f6fe;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .top {
